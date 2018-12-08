@@ -6,5 +6,5 @@ config_file:
   path: /etc/httpd/conf/httpd.conf
 
 index_file:
-  path: /var/www/html/index.html
+  path: /var/www/html/
 
