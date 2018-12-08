@@ -7,3 +7,9 @@
   tasks:
   - name: Include Config tasks file
     include_tasks: tasks/main.yml
+
+  handlers:
+  - name: Restart service
+    service:
+      name: httpd
+      state: restarted
