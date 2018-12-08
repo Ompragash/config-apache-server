@@ -2,14 +2,5 @@
 - hosts: all
   become: True
   gather_facts: False
-  vars_files:
-    - vars/main.yml
-  tasks:
-  - name: Include Config tasks file
-    include_tasks: tasks/main.yml
-
-  handlers:
-  - name: Restart service
-    service:
-      name: httpd
-      state: restarted
+  roles:
+    - simple-webserver

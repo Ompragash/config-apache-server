@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=21008429" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/Ompragash" aria-describedby="hovercard-aria-description">Hands-On-Ansible by Ompragash Viswanathan</a></span><!--
+--><span class="path-divider"></span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="https://github.com/Ompragash/Hands-On-Ansible"></a></strong>
+
+</h1>
+
+  <div id="readme" class="readme blob instapaper_body">
+    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-hands-on-ansible" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#hands-on-ansible"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hands-On-Ansible</h1>
+<p>This repository have the goal of providing an opportunity for all the people to get an insight on how to play with Ansible.</p>
+<h2><a id="user-content-what-is-ansible" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#what-is-ansible"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is Ansible?</h2>
+<p>Ansible is an open source IT configuration management, deployment, and orchestration tool, based on Python.</p>
+<h2><a id="user-content-architecture" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#architecture"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Architecture</h2>
+<ul>
+<li>There are two types of machines in the Ansible architecture: the control node and managed hosts.</li>
+<li>Ansible software is installed on the control node and all of its components are maintained on it.</li>
+<li>The managed hosts are listed in a host inventory, a text file on the control node that includes a list of managed host names or IP addresses.</li>
+<li>Ansible uses SSH as a network transport to communicate with the managed hosts.</li>
+<li>The modules referenced in the playbook are copied to the managed hosts.</li>
+<li>Then these modules are executed, in order, with the arguments specified in the playbook.</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/images/ansible-architecture-new.jpg"><img src="./ompragash_files/ansible-architecture-new.jpg" alt="picture alt" style="max-width:100%;"></a></p>
+<h2><a id="user-content-ansible-core-components" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#ansible-core-components"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ansible Core Components</h2>
+<h3><a id="user-content-1-inventory" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#1-inventory"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Inventory</h3>
+<p>An inventory is a text file listing hostnames usually grouped by functionality. Files are organized as hosts and groups. A set of hosts can be under a group name. A host can be in more than one group.</p>
+<p><strong>Recommendations on the Inventory</strong></p>
+<ul>
+<li>Give inventory nodes a human-friendly name rather than just putting the IP addresses or DNS hostnames.</li>
+</ul>
+<h3><a id="user-content-types-of-ansible-inventories" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#types-of-ansible-inventories"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types of Ansible Inventories:</h3>
+<h4><a id="user-content-1-static-inventory" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#1-static-inventory"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Static Inventory</h4>
+<ul>
+<li>Static inventory is default inventory and is defined in the /etc/ansible/ansible.cfg file.</li>
+</ul>
+<h4><a id="user-content-2-dynamic-inventory" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#2-dynamic-inventory"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Dynamic Inventory</h4>
+<ul>
+<li>Dynamic inventory to pull files from dynamic sources and cloud.</li>
+<li>If you have the setup where you add and remove the hosts very frequently, then keeping your inventory always up-to-date become a little bit problematic. In such case Dynamic inventory comes into picture.</li>
+<li>These are generally Python or Shell scripts for dynamic environments (for example cloud environments).</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/images/static-inventory-example.png"><img src="./ompragash_files/static-inventory-example.png" alt="picture alt" style="max-width:100%;"></a></p>
+<h3><a id="user-content-2-ansible-modules" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#2-ansible-modules"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Ansible Modules</h3>
+<ul>
+<li>
+<p>Modules control system resources like services, packages, files, system commands, etc.</p>
+</li>
+<li>
+<p>It can be executed directly in CLI or through playbooks.</p>
+</li>
+<li>
+<p>Modules are language independent and idempotent(Avoid changes to system unless needed).</p>
+</li>
+<li>
+<p>There are three types of Ansible modules they are Core, Extras, and Custom modules</p>
+<ul>
+<li>Core and Extras modules are always available. Ansible looks for custom modules on the control node in directories defined by the $ANSIBLE_LIBRARY environment variable.</li>
+</ul>
+<h4><a id="user-content-running-ad-hoc-commands" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#running-ad-hoc-commands"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running ad hoc commands</h4>
+</li>
+<li>
+<p>To execute an ad hoc command, administrators need to execute the ansible command using the following syntax:</p>
+<p>$ <em>ansible host-pattern -m module [-a 'module argument']</em> <em>[-i inventory]</em></p>
+</li>
+</ul>
+<h3><a id="user-content-3-ansible-configuration-file" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#3-ansible-configuration-file"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Ansible Configuration File</h3>
+<ul>
+<li>
+<p>Simply Configuration file modifies the behaviour of ansible.</p>
+</li>
+<li>
+<p>When an ad hoc command is executed, First, the Ansible configuration file is consulted for various parameters.</p>
+</li>
+<li>
+<p>By default, connections to managed hosts are initiated using the SSH protocol.</p>
+</li>
+<li>
+<p>The SSH protocol requires the connection to be established using an account on the managed host.</p>
+</li>
+<li>
+<p>This account is referred by Ansible as the remote user and is defined using the remote_user parameter under the [defaults] section of the configuration file.</p>
+<p>$ <em>ansible node -m ping</em></p>
+</li>
+<li>
+<p>The recommended practice is to create an ansible.cfg file in a directory from which  you run Ansible commands.</p>
+</li>
+</ul>
+<h3><a id="user-content-4-ansible-playbook" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#4-ansible-playbook"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Ansible Playbook</h3>
+<ul>
+<li>Playbooks are executed using the <em>ansible-playbook</em> command.
+<ul>
+<li>Playbook contains Plays</li>
+<li>Plays contains Tasks</li>
+<li>Tasks call Modules</li>
+<li>Tasks run sequentially</li>
+<li>Tasks triggers handlers</li>
+<li>Handlers run once at the end</li>
+</ul>
+</li>
+<li>Complex playbooks may contain a long list of tasks.With Ansible version 2.0, <em>blocks</em> offer another alternative to task organization.</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/images/Ansible_Playbook.png"><img src="./ompragash_files/Ansible_Playbook.png" alt="picture alt" style="max-width:100%;"></a></p>
+<h3><a id="user-content-5-ansible-variables" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#5-ansible-variables"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Ansible Variables</h3>
+<ul>
+<li>Ansible supports variables that can be used to store values that can be reused throughout files in an entire Ansible project.</li>
+<li>Simply we can manage dynamic values in our project.</li>
+<li>Quotes are mandatory when we use variables is used as the first element.</li>
+<li>Some examples of values that variables might contain include:
+<ol>
+<li>Users to create.</li>
+<li>Packages to install.</li>
+<li>Services to restart.</li>
+<li>Files to remove.</li>
+<li>Archives to retrieve from the Internet.</li>
+</ol>
+</li>
+</ul>
+<h3><a id="user-content-6-ansible-facts" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#6-ansible-facts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Ansible Facts</h3>
+<ul>
+<li>
+<p>Ansible facts are variables that are automatically discovered by Ansible from a managed host.</p>
+</li>
+<li>
+<p>Facts are pulled by the setup module and contain useful information stored into variables that administrators can reuse.</p>
+</li>
+<li>
+<p>Fact variables can be used as part of playbooks, in conditionals, loops, or any other dynamic statement that depends on a value for a managed host.</p>
+</li>
+<li>
+<p>We can also create custom facts and push them to a managed node.</p>
+<h4><a id="user-content-displaying-facts-from-a-hosts" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#displaying-facts-from-a-hosts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Displaying facts from a hosts:</h4>
+<p>$ <em>ansible host-pattern -m setup</em></p>
+</li>
+</ul>
+<h3><a id="user-content-7-ansible-roles" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#7-ansible-roles"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Ansible Roles</h3>
+<ul>
+<li>Roles provide Ansible with a way to load tasks, handlers, and variables from external files.</li>
+<li>Static files and templates can also be associated and referenced by a role.</li>
+<li>Roles can be written so they are general purpose and can be reused.</li>
+<li>Some basic advantages of roles:
+<ol>
+<li>Roles group content, allowing easy sharing of code with others.</li>
+<li>Roles can be written that define the essential elements of a system type: web server, database server, git repository, or other purpose.</li>
+<li>Roles make larger projects more manageable.</li>
+<li>Roles can be developed in parallel by different administrators.</li>
+</ol>
+</li>
+</ul>
+<h3><a id="user-content-8-ansible-galaxy" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#8-ansible-galaxy"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. Ansible Galaxy</h3>
+<ul>
+<li>Ansible Galaxy [<a href="https://galaxy.ansible.com/" rel="nofollow">https://galaxy.ansible.com</a>] is a public library of Ansible roles written by a variety of Ansible administrators and users.</li>
+<li>It is an archive that contains thousands of Ansible roles and it has a searchable database that helps Ansible users identify roles that might help   them accomplish an administrative task.</li>
+<li>It includes links to documentation and videos for new Ansible users and role developers.</li>
+<li>Ansible-galaxy search subcommand searches Ansible Galaxy for the string specified as an argument. The --author, --platforms, and --galaxy-tags options can be used to narrow the search results.</li>
+</ul>
+<h3><a id="user-content-9-ansible-vault" class="anchor" aria-hidden="true" href="https://github.com/Ompragash/Hands-On-Ansible/blob/master/README.md#9-ansible-vault"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9. Ansible Vault</h3>
+<p>Vault is used to protect sensitive data in your playbooks.</p>
+<ul>
+<li>To create a new encrypted data file, run the following command:
+<ul>
+<li>$ <em>ansible-vault create secret.yml</em></li>
+</ul>
+</li>
+</ul>
+<p>Similarly we can use edit, encrypt, decrypt and rekey, for more details on how to work with vault files, check manual page:</p>
+<p>$ <em>man ansible-vault</em></p>
+</article>
+
+</body></html>

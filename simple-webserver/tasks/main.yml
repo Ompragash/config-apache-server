@@ -1,0 +1,39 @@
+---
+- name: Install {{ packages.web }}
+  yum:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - "{{ packages.web }}"
+  
+- name: Start and Enable {{ packages.web }} service
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: True
+  loop:
+    - "{{ packages.web }}"
+  
+- name: Editing config file
+  blockinfile:
+    content: |
+      <VirtualHost *:80>
+      servername localhost
+      documentroot /var/www/html
+      </VirtualHost>
+    path: "{{ config_file.path }}"
+  notify:
+    - Restart service
+
+- name: Copy Index.html to web server root
+  copy:
+    src: "{{ item }}"
+    dest: "{{ index_file.path }}"
+  loop:
+    - files/index.html
+    - files/index_files
+
+#- name: Copy index.html file
+#  template:
+#    src: index.html.j2
+#    dest: "{{ index_file.path }}"
