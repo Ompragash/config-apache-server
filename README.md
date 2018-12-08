@@ -1,1 +1,1 @@
-# config-apache-server
+# config-simple-server
