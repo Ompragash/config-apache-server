@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  become: True
   gather_facts: False
   vars_files:
     - vars/main.yml
