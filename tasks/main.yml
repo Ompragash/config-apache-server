@@ -34,9 +34,3 @@
 #  template:
 #    src: index.html.j2
 #    dest: "{{ index_file.path }}"
-
-  handlers:
-  - name: Restart service
-    service:
-      name: httpd
-      state: restarted
